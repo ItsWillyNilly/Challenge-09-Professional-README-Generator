@@ -46,7 +46,7 @@ ${data.description}
 ## Table of Contents (Optional)
 
 - [Installation](#installation)
-- [Usage Guidelines]((#usage)
+- [Usage Guidelines](#usage)
 - [Contributing](#contribution)
 - [License](#license)
 - [Tests](#test)
