@@ -46,7 +46,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'usage guidelines',
+        name: 'usage',
         message: 'Please enter the usage guidelines for your project.',
         validate: (value) => {
             if (value) {
@@ -59,7 +59,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'contribution guidelines',
+        name: 'contribution',
         message: 'Please enter the contribution guidelines for your project.',
         validate: (value) => {
             if (value) {
@@ -71,8 +71,15 @@ const questions = [
     },
 
     {
+        type: 'list',
+        name: 'license',
+        message: 'Please select the license for your project.',
+        choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'BSD-3-Clause', 'None']
+    },
+
+    {
         type: 'input',
-        name: 'test instructions',
+        name: 'test',
         message: 'Please enter the test instructions for your project.',
         validate: (value) => {
             if (value) {
@@ -89,15 +96,22 @@ function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err) {
             console.log(err);
+            return;
         } else {
             console.log('File created successfully.');
         }
-    }
-)}
+    })
+}
 
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+        .then((data) => {
+            writeToFile('README.md', generateMarkdown(data));
+            console.log(data);
+        })
+}
 
 // Function call to initialize app
 init();
