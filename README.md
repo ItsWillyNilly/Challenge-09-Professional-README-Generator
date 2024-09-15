@@ -34,6 +34,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Technologies Used
 **Node.js**
+<br>
 **inquirer**
 
 ## Installation Instructions
@@ -43,11 +44,11 @@ git clone git@github.com:ItsWillyNilly/Challenge-09-Professional-README-Generato
 ```
 
 **Change directory into the "Develop" folder**
-example:
+<br>EXAMPLE:
 ```
 cd /Users/williamlee/bootcamp/challenge-09/Challenge-09-Professional-README-Generator/Develop
 ```
-**Install the Node Package**
+**Install the Node package**
 ```bash
 npm init -y
 ```
@@ -57,8 +58,13 @@ npm init -y
 npm i inquirer
 ```
 
-## Screenshot of the website
-Video Demonstration <img src="Develop/assets/videos/READMEDemo.gif">
+**Run the program**
+```bash
+node index.js
+```
+
+## Program Demonstration
+ <img src="Develop/assets/videos/READMEDemo.gif">
 
 ## GitHub Repo Link
 https://github.com/ItsWillyNilly/Challenge-09-Professional-README-Generator
